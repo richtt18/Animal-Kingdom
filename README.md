@@ -31,3 +31,17 @@ Survey Page Mockup
 
 Results Page Mockup
 <img src="https://github.com/richtt18/Animal-Kingdom/blob/master/readme-photos/results.jpeg" height="200px">
+
+## Team Rando!
+
+Rich
+<img src="https://github.com/richtt18/Animal-Kingdom/blob/master/readme-photos/1Rich.png" height="200px">
+
+Chris
+<img src="https://github.com/richtt18/Animal-Kingdom/blob/master/readme-photos/2Chris.png" height="200px">
+
+Almaz
+<img src="https://github.com/richtt18/Animal-Kingdom/blob/master/readme-photos/3Almaz.png" height="200px">
+
+Tiara
+<img src="https://github.com/richtt18/Animal-Kingdom/blob/master/readme-photos/4Tiara.png" height="200px">
