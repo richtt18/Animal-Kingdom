@@ -20,8 +20,10 @@ Match pets that need homes with people best suited to take care of them!
 
 ## Architecture Diagram
 
+<img src="https://github.com/richtt18/Animal-Kingdom/blob/master/readme-photos/architecture_diagram.png" height="200px">
+
 ## Mockup Design
-Index Page Mockup.
+Index Page Mockup
 <img src="https://github.com/richtt18/Animal-Kingdom/blob/master/readme-photos/index.jpeg" height="200px">
 
 Survey Page Mockup
