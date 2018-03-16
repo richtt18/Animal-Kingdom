@@ -1,0 +1,27 @@
+{
+  "name": "animal-kingdom",
+  "version": "1.0.0",
+  "description": "### Description Match pets that need homes with people best suited to take care of them!",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql2": "^1.5.2",
+    "sequelize": "^4.37.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richtt18/Animal-Kingdom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richtt18/Animal-Kingdom/issues"
+  },
+  "homepage": "https://github.com/richtt18/Animal-Kingdom#readme"
+}
