@@ -288,15 +288,16 @@ $("#submit").on("click", function(){
 	  score: score
   };
 
-  console.log(userData);
+  
   	var currentURL = window.location.origin;
 	// AJAX POST to the data to the friends.js API.
 	$.post(currentURL + "/api/users", userData, function(data){
 		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
-		$("#matchName").text(data.name);
-		$('#matchImg').attr("src", data.photo);
+		// $("#matchName").text(data.name);
+		// $('#matchImg').attr("src", data.photo);
 		// Show the modal window with the best match
-		$("#resultsModal").modal('toggle');
+		// $("#resultsModal").modal('toggle');
+		console.log(data);
 	});
 } else {
 	alert("Please fill out all fields before submitting the survey!");
