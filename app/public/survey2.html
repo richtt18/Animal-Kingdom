@@ -8,41 +8,42 @@
 		<meta name="author" content="Julie Hoffman">
 
 		<!-- Link to current min version of bootstrap and jquery library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
 
-		<body>
-				<section class="hero is-fullheight is-default is-bold">
-			  <div class="hero-head">
-						<nav class="navbar">
-							<div class="container">
-								<div class="navbar-brand">
-									<a class="navbar-item" href="../survey2">
-									<img src="https://image.ibb.co/i7FW4c/images_1.jpg" alt="images_1" border="0">
-									</a>
-									<span class="navbar-burger burger" data-target="navbarMenu">
-										<span></span>
-										<span></span>
-										<span></span>
-									</span>
-								</div>
-								<div id="navbarMenu" class="navbar-menu">
-				 <div class="navbar-end"><div class="tabs is-right">
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="">DOGS</a></li>
-						<li><a href="">CATS</a></li>
-						<li class="is-active"><a  href="/survey2">SURVEY</a></li>
-				
-					</ul>
-				</div>
-									</div>
+	<body>
+		<section class="hero is-fullheight is-default is-bold">
+			<div class="hero-head">
+				<nav class="navbar">
+					<div class="container">
+						<div class="navbar-brand">
+							<a class="navbar-item" href="../survey2">
+								<img src="https://image.ibb.co/i7FW4c/images_1.jpg" alt="images_1"
+									border="0">
+							</a>
+							<span class="navbar-burger burger" data-target="navbarMenu">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</div>
+						<div id="navbarMenu" class="navbar-menu">
+							<div class="navbar-end"><div class="tabs is-right">
+									<ul>
+										<li><a href="/">Home</a></li>
+										<li><a href="">DOGS</a></li>
+										<li><a href="">CATS</a></li>
+										<li class="is-active"><a href="/survey2">SURVEY</a></li>
+
+									</ul>
 								</div>
 							</div>
-						</nav>
+						</div>
 					</div>
+				</nav>
+			</div>
 			<!-- Begin the bootstrap container -->
 			<div class="container">
 
@@ -50,232 +51,261 @@
 				<!-- Begin user input -->
 				<h3><strong>ABOUT YOU</strong></h3>
 				<div class="field">
-						<label class="label">Full name</label>
-						<div class="control">
-							<input class="input" type="text" placeholder="Text input">
-						</div>
+					<label class="label">Full name</label>
+					<div class="control">
+						<input class="input form-control" type="text" placeholder="Text input" id="name">
+					</div>
 				</div>
 
 				<div class="field">
-						<label class="label">Email</label>
-						<div class="control">
-							<input class="input" type="email" placeholder="Email input">
-						</div>
+					<label class="label">Email</label>
+					<div class="control">
+						<input class="input form-email" type="email" placeholder="Email input" id="email">
+					</div>
 				</div>
-			
+
 				<div class="field">
-				<label for="inputCity" class="label">City</label>
-				<div class="control">
-          <input class="input" type="text" class="animated slideInRight userCityFormat border rounded-right text-center" id="inputCity" placeholder="Enter a City">
+					<label for="inputCity" class="label">City</label>
+					<div class="control">
+						<input class="input form-control" type="text" class="animated slideInRight
+							userCityFormat border rounded-right text-center" id="inputCity"
+							placeholder="Enter a City">
+					</div>
 				</div>
-			</div>
-			<br>
+				<br>
 				<h2>Survey Questions:</h2>
 				<hr>
 
-				<!-- Begin 12 survey questions with dropdown selections of 1 (strongly disagree) to 5 (strongly agree) -->
-<div class="columns">
-		<div class="column">
-				<h3><strong>1. List your priorities, in order of importance:</strong></h3><br>
-			
-				<input type='radio' name='questiion-1' value='0'> Family, Friends, Work<br>
-				<input type='radio' name='questiion-1' value='1'> Friends, Family, Work<br>
-				<input type='radio' name='questiion-1' value='2'> Family, Work, Friends<br>
-				<input type='radio' name='questiion-1' value='3'> Work, Whatever else....<br>
-				<input type='radio' name='questiion-1' value='4'> Me, Myself, I<br><br>
-		      
-				<h3><strong>3. What kind of a reader are you?</strong></h3><br>
-			 
-				<input type='radio' name='questiion-3' value='0'> Voracious<br>
-				<input type='radio' name='questiion-3' value='1'> MID-LEVEL to HEAVY reader of all things<br>
-				<input type='radio' name='questiion-3' value='2'> LIGHT to MID-LEVEL reader of all things<br>
-				<input type='radio' name='questiion-3' value='3'> LIGHT reader of all things<br>
-				<input type='radio' name='questiion-3' value='4'> I've never read a book<br><br>
-			  
-				<h3><strong>5. How do you spend your free time?</strong></h3><br>
-			 
-				<input type='radio' name='questiion-5' value='0'> Outside always<br>
-				<input type='radio' name='questiion-5' value='1'> Inside always<br>
-				<input type='radio' name='questiion-5' value='2'> With people<br>
-				<input type='radio' name='questiion-5' value='3'> By myself<br>
-				<input type='radio' name='questiion-5' value='4'> I have no free time<br><br>
+				<!-- Begin 12 survey questions with dropdown selections of 1 (strongly
+					disagree) to 5 (strongly agree) -->
+				<div class="columns">
+					<div class="column">
+						<h3><strong>1. List your priorities, in order of importance:</strong></h3><br>
+						<input type='radio' name='question-1' value='0'> Family, Friends, Work<br>
+						<input type='radio' name='question-1' value='1'> Friends, Family, Work<br>
+						<input type='radio' name='question-1' value='2'> Family, Work, Friends<br>
+						<input type='radio' name='question-1' value='3'> Work, Whatever else....<br>
+						<input type='radio' name='question-1' value='4'> Me, Myself, I<br><br>
+						<h3><strong>3. What kind of a reader are you?</strong></h3><br>
 
-				<h3><strong>7. Choose a vacation:</strong></h3><br>
-			 
-				<input type='radio' name='questiion-7' value='0'> Bike through Europe<br>
-				<input type='radio' name='questiion-7' value='1'> A week in the tropic<br>
-				<input type='radio' name='questiion-7' value='2'> A day hike sounds awesome<br>
-				<input type='radio' name='questiion-7' value='3'> A week of fishing in the sun<br>
-				<input type='radio' name='questiion-7' value='4'> I'll be here if you need me<br><br>
+						<input type='radio' name='question-3' value='0'> Voracious<br>
+						<input type='radio' name='question-3' value='1'> MID-LEVEL to HEAVY
+						reader of all things<br>
+						<input type='radio' name='question-3' value='2'> LIGHT to MID-LEVEL
+						reader of all things<br>
+						<input type='radio' name='question-3' value='3'> LIGHT reader of all
+						things<br>
+						<input type='radio' name='question-3' value='4'> I've never read a book<br><br>
+						<h3><strong>5. How do you spend your free time?</strong></h3><br>
 
-				<h3><strong>9. Describe yourself in traffic:</strong></h3><br>
-			 
-				<input type='radio' name='questiion-9' value='0'> Seething<br>
-				<input type='radio' name='questiion-9' value='1'> Teetering on the brink<br>
-				<input type='radio' name='questiion-9' value='2'> Cucumber, as in "Cool as a ..."<br>
-				<input type='radio' name='questiion-9' value='3'> Crying<br>
-				<input type='radio' name='questiion-9' value='4'> Singing like an idiot<br><br>
+						<input type='radio' name='question-5' value='0'> Outside always<br>
+						<input type='radio' name='question-5' value='1'> Inside always<br>
+						<input type='radio' name='question-5' value='2'> With people<br>
+						<input type='radio' name='question-5' value='3'> By myself<br>
+						<input type='radio' name='question-5' value='4'> I have no free time<br><br>
+						<h3><strong>7. Choose a vacation:</strong></h3><br>
 
-				<h3><strong>11. Do you want a hug?</strong></h3><br>
-			 
-				<input type='radio' name='questiion-11' value='0'> YES, squeeze me<br>
-				<input type='radio' name='questiion-11' value='1'> A handshake will do<br>
-				<input type='radio' name='questiion-11' value='2'> Not right now, but maybe later on my own terms<br>
-				<input type='radio' name='questiion-11' value='3'> I'm reporting you to HR<br>
-				<input type='radio' name='questiion-11' value='4'> Do you want a punch?<br><br>
-		</div>
-		<div class="column">
-				<h3><strong>2. Where do you live?</strong></h3><br>
-			 
-				<input type='radio' name='questiion-2' value='0'> Country farm<br>
-				<input type='radio' name='questiion-2' value='1'> Suburbs<br>
-				<input type='radio' name='questiion-2' value='2'> City - big place<br>
-				<input type='radio' name='questiion-2' value='3'> City - small place<br>
-				<input type='radio' name='questiion-2' value='4'> Homeless<br><br>
+						<input type='radio' name='question-7' value='0'> Bike through Europe<br>
+						<input type='radio' name='question-7' value='1'> A week in the tropic<br>
+						<input type='radio' name='question-7' value='2'> A day hike sounds
+						awesome<br>
+						<input type='radio' name='question-7' value='3'> A week of fishing in the
+						sun<br>
+						<input type='radio' name='question-7' value='4'> I'll be here if you need
+						me<br><br>
 
-				<h3><strong>4. Choose a Film:</strong></h3><br>
-			 
-				<input type='radio' name='questiion-4' value='0'> Titanic<br>
-				<input type='radio' name='questiion-4' value='1'> UP<br>
-				<input type='radio' name='questiion-4' value='2'> Jaws<br>
-				<input type='radio' name='questiion-4' value='3'> Die Hard<br>
-				<input type='radio' name='questiion-4' value='4'> I hate movies<br><br>
+						<h3><strong>9. Describe yourself in traffic:</strong></h3><br>
 
-				<h3><strong>6. What kind of person are you attracted to?</strong></h3><br>
-			 
-				<input type='radio' name='questiion-6' value='0'> Only looks matter<br>
-				<input type='radio' name='questiion-6' value='1'> Make me laugh, I'm yours<br>
-				<input type='radio' name='questiion-6' value='2'> Someone independent<br>
-				<input type='radio' name='questiion-6' value='3'> Someone who relaxes me<br>
-				<input type='radio' name='questiion-6' value='4'> I hate everyone<br><br>
-			
-				<h3><strong>8. How do you give back to the community?</strong></h3><br>
-			 
-				<input type='radio' name='questiion-8' value='0'> I volunteer<br>
-				<input type='radio' name='questiion-8' value='1'> I give to local charities<br>
-				<input type='radio' name='questiion-8' value='2'> I pay my taxes, that's enough<br>
-				<input type='radio' name='questiion-8' value='3'> Just being alive<br>
-				<input type='radio' name='questiion-8' value='4'> I do nothing<br><br>
+						<input type='radio' name='question-9' value='0'> Seething<br>
+						<input type='radio' name='question-9' value='1'> Teetering on the brink<br>
+						<input type='radio' name='question-9' value='2'> Cucumber, as in "Cool as
+						a ..."<br>
+						<input type='radio' name='question-9' value='3'> Crying<br>
+						<input type='radio' name='question-9' value='4'> Singing like an idiot<br><br>
+						<h3><strong>11. Do you want a hug?</strong></h3><br>
 
-				<h3><strong>10. How important is fashion in your life?</strong></h3><br>
-			 
-				<input type='radio' name='questiion-10' value='0'> It's everything<br>
-				<input type='radio' name='questiion-10' value='1'> I love shopping but there are more important things<br>
-				<input type='radio' name='questiion-10' value='2'> I love looking good but there are more important things<br>
-				<input type='radio' name='questiion-10' value='3'> The less clothing the better<br>
-				<input type='radio' name='questiion-10' value='4'> I could care less<br><br>
+						<input type='radio' name='question-11' value='0'> YES, squeeze me<br>
+						<input type='radio' name='question-11' value='1'> A handshake will do<br>
+						<input type='radio' name='question-11' value='2'> Not right now, but
+						maybe later on my own terms<br>
+						<input type='radio' name='question-11' value='3'> I'm reporting you to HR<br>
+						<input type='radio' name='question-11' value='4'> Do you want a punch?<br><br>
+					</div>
+					<div class="column">
+						<h3><strong>2. Where do you live?</strong></h3><br>
 
-				<h3><strong>12. How clean is your place?</strong></h3><br>
-			 
-				<input type='radio' name='questiion-12' value='0'> Immaculate<br>
-				<input type='radio' name='questiion-12' value='1'> Almost always clean<br>
-				<input type='radio' name='questiion-12' value='2'> Clothes live on my floor<br>
-				<input type='radio' name='questiion-12' value='3'> Bugs live on my floor<br>
-				<input type='radio' name='questiion-12' value='4'> Have you heard of the show hoarders?<br><br>
-			</div>
-</div>
+						<input type='radio' name='question-2' value='0'> Country farm<br>
+						<input type='radio' name='question-2' value='1'> Suburbs<br>
+						<input type='radio' name='question-2' value='2'> City - big place<br>
+						<input type='radio' name='question-2' value='3'> City - small place<br>
+						<input type='radio' name='question-2' value='4'> Homeless<br><br>
+
+						<h3><strong>4. Choose a Film:</strong></h3><br>
+
+						<input type='radio' name='question-4' value='0'> Titanic<br>
+						<input type='radio' name='question-4' value='1'> UP<br>
+						<input type='radio' name='question-4' value='2'> Jaws<br>
+						<input type='radio' name='question-4' value='3'> Die Hard<br>
+						<input type='radio' name='question-4' value='4'> I hate movies<br><br>
+						
+						<h3><strong>6. What kind of person are you attracted to?</strong></h3><br>
+						
+						<input type='radio' name='question-6' value='0'> Only looks matter<br>
+						<input type='radio' name='question-6' value='1'> Make me laugh, I'm yours<br>
+						<input type='radio' name='question-6' value='2'> Someone independent<br>
+						<input type='radio' name='question-6' value='3'> Someone who relaxes me<br>
+						<input type='radio' name='question-6' value='4'> I hate everyone<br><br>
+						
+						<h3><strong>8. How do you give back to the community?</strong></h3><br>
+						
+						<input type='radio' name='question-8' value='0'> I volunteer<br>
+						<input type='radio' name='question-8' value='1'> I give to local
+						charities<br>
+						<input type='radio' name='question-8' value='2'> I pay my taxes, that's
+						enough<br>
+						<input type='radio' name='question-8' value='3'> Just being alive<br>
+						<input type='radio' name='question-8' value='4'> I do nothing<br><br>
+						
+						<h3><strong>10. How important is fashion in your life?</strong></h3><br>
+						
+						<input type='radio' name='question-10' value='0'> It's everything<br>
+						<input type='radio' name='question-10' value='1'> I love shopping but
+						there are more important things<br>
+						<input type='radio' name='question-10' value='2'> I love looking good but
+						there are more important things<br>
+						<input type='radio' name='question-10' value='3'> The less clothing the
+						better<br>
+						<input type='radio' name='question-10' value='4'> I could care less<br><br>
+						
+						<h3><strong>12. How clean is your place?</strong></h3><br>
+
+						<input type='radio' name='question-12' value='0'> Immaculate<br>
+						<input type='radio' name='question-12' value='1'> Almost always clean<br>
+						<input type='radio' name='question-12' value='2'> Clothes live on my
+						floor<br>
+						<input type='radio' name='question-12' value='3'> Bugs live on my floor<br>
+						<input type='radio' name='question-12' value='4'> Have you heard of the
+						show hoarders?<br><br>
+					</div>
+				</div>
 				<br>
 				<br>
 
 				<!-- Submit Button -->
 				<button class="button is-info is-focused" id="submit">SUBMIT</button>
-				 
 
-			<!-- End the bootstrap container -->
+
+				<!-- End the bootstrap container -->
 			</div>
 
 			<!-- Modal -->
 			<div id="resultsModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog">
+				<div class="modal-dialog">
 
-			    <!-- Modal content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h2 class="modal-title"><strong>Your Best Study Friend Match!</strong></h2>
-			      </div>
-			      <div class="modal-body">
-			        <h2 id="matchName"></h2>
-			        <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			      </div>
-			    </div>
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h2 class="modal-title"><strong>Your Best Study Friend Match!</strong></h2>
+						</div>
+						<div class="modal-body">
+							<h2 id="matchName"></h2>
+							
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
 
-			  </div>
+				</div>
 			</div>
-</section>
-			 <script type="text/javascript">
-				// Chosen CSS method
-				
-			
-    function gAutoComplete() {
-      var locInput = document.getElementById("inputCity");
-      var options = {
-        types: ["(cities)"],
-        componentRestrictions: {
-          country: "us"
-        }
-      };
-      var autocomplete = new google.maps.places.Autocomplete(locInput, options);
-    }
+		</section>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		function gAutoComplete() {
+        var locInput = document.getElementById("inputCity");
+        var options = {
+          types: ["(cities)"],
+          componentRestrictions: {
+            country: "us"
+          }
+        };
+        var autocomplete = new google.maps.places.Autocomplete(locInput, options);
+	  }
+	  </script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCBCVEBvtLtjpWQfrU96srHskWk4V4Azzo&libraries=places&callback=gAutoComplete"></script>
+	<script  type="text/javascript">
+	
+$("#submit").on("click", function(){
+  
+  var score = 0;
+  var count = 0;
+
+  function validateForm(){
+	  
+	var isValid = true;
+	var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+	var email = $('.form-email').val();
+
+	$('.form-control').each(function() {
+		if ( $(this).val() === '' )
+		    isValid = false;
+		});
+	
+	if (!testEmail.test(email)){
+		
+		return isValid = false;
+	}
+	
+	for(i=0; i <13; i++){
+	 	$.each($("input[name='question-" + i + "']:checked"), function() {
+      		count ++
+    	});
+	};
+	
+		if (count < 12){
+			return isValid = false;
+		};
 
 
-		    var config = {
-		      '.chosen-select'           : {},
-		      '.chosen-select-deselect'  : {allow_single_deselect:true},
-		      '.chosen-select-no-single' : {disable_search_threshold:10},
-		      '.chosen-select-no-results': {no_results_text:'Oops, Nothing Found!'},
-		      '.chosen-select-width'     : {width:"95%"}
-		    }
-		    // Loop over
-		    for (var selector in config) {
-		      $(selector).chosen(config[selector]);
-		    }
-		    // Collect the user inputs on the form when the submit button is clicked
-		    $("#submit").on("click", function(){
-		    	// Form validator function
-		    	function validateForm() {
-				  var isValid = true;
-				  $('.form-control').each(function() {
-				    if ( $(this).val() === '' )
-				        isValid = false;
-				  });
-				  $('.chosen-select').each(function() {
-				  	if( $(this).val() === "")
-				  		isValid = false
-				  })
-				  return isValid;
-				}
-				// If all user input fields on the form are filled in
-				if (validateForm() == true)
-				{
-					// Create an object  to hold the user's input or data
-			    	var userData = {
-			    		name: $("#name").val(),
-			    		photo: $("#photo").val(),
-			    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
-			    	}
-			    	// Grab the URL of the website
-			    	var currentURL = window.location.origin;
-			    	// AJAX POST to the data to the friends.js API.
-			    	$.post(currentURL + "/api/friends", userData, function(data){
-			    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
-			    		$("#matchName").text(data.name);
-			    		$('#matchImg').attr("src", data.photo);
-				    	// Show the modal window with the best match
-				    	$("#resultsModal").modal('toggle');
-			    	});
-				}
-				else
-				{
-					alert("Please fill out all fields before submitting the survey!");
-				}
+	 return isValid
+  }
+  
+  console.log(validateForm());
 
-		    	return false;
-		    });
-		  	</script>
- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCBCVEBvtLtjpWQfrU96srHskWk4V4Azzo&libraries=places&callback=gAutoComplete"></script>
-</body>
+  if (validateForm() == true) {
+
+  for(i=0; i <13; i++){
+      $.each($("input[name='question-" + i + "']:checked"), function() {
+      score += parseInt($(this).val());
+     });
+  }
+  
+  var userData = {
+	  name: $("#name").val(),
+	  email: $("#email").val(),
+	  location: $("#inputCity").val(),
+	  score: score
+  };
+
+  console.log(userData);
+  	var currentURL = window.location.origin;
+	// AJAX POST to the data to the friends.js API.
+	$.post(currentURL + "/api/users", userData, function(data){
+		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
+		$("#matchName").text(data.name);
+		$('#matchImg').attr("src", data.photo);
+		// Show the modal window with the best match
+		$("#resultsModal").modal('toggle');
+	});
+} else {
+	alert("Please fill out all fields before submitting the survey!");
+	}
+
+	return false;
+
+  });
+  
+ 	</script>
+	</body>
 </html>
