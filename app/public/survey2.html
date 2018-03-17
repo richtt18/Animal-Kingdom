@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title><strong>Study Friend Finder</strong></title>
+		<title>Survey</title>
 
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,7 @@
 		<!-- Link to current min version of bootstrap and jquery library -->
 		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+		
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
 
@@ -195,7 +196,7 @@
 				<br>
 
 				<!-- Submit Button -->
-				<button class="button is-info is-focused" id="submit">SUBMIT</button>
+				<button class="button is-info is-focused" id="submit"><a href="/result">SUBMIT</a></button>
 
 
 				<!-- End the bootstrap container -->
@@ -237,79 +238,6 @@
 	  }
 	  </script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCBCVEBvtLtjpWQfrU96srHskWk4V4Azzo&libraries=places&callback=gAutoComplete"></script>
-	<script  type="text/javascript">
 
-$("#submit").on("click", function(){
-
-  var score = 0;
-  var count = 0;
-
-  function validateForm(){
-
-	var isValid = true;
-	var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
-	var email = $('.form-email').val();
-
-	$('.form-control').each(function() {
-		if ( $(this).val() === '' )
-		    isValid = false;
-		});
-
-	if (!testEmail.test(email)){
-
-		return isValid = false;
-	}
-
-	for(i=0; i <13; i++){
-	 	$.each($("input[name='question-" + i + "']:checked"), function() {
-      		count ++
-    	});
-	};
-
-		if (count < 12){
-			return isValid = false;
-		};
-
-
-	 return isValid
-  }
-
-  console.log(validateForm());
-
-  if (validateForm() == true) {
-
-  for(i=0; i <13; i++){
-      $.each($("input[name='question-" + i + "']:checked"), function() {
-      score += parseInt($(this).val());
-     });
-  }
-
-  var userData = {
-	  name: $("#name").val(),
-	  email: $("#email").val(),
-	  location: $("#inputCity").val(),
-	  score: score
-  };
-
-
-  	var currentURL = window.location.origin;
-	// AJAX POST to the data to the friends.js API.
-	$.post(currentURL + "/api/users", userData, function(data){
-		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
-		// $("#matchName").text(data.name);
-		// $('#matchImg').attr("src", data.photo);
-		// Show the modal window with the best match
-		// $("#resultsModal").modal('toggle');
-		console.log(data);
-	});
-} else {
-	alert("Please fill out all fields before submitting the survey!");
-	}
-
-	return false;
-
-  });
-
- 	</script>
 	</body>
 </html>
