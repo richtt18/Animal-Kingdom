@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title><strong>Study Friend Finder</strong></title>
+		<title>Survey</title>
 
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -275,7 +275,7 @@ $("#submit").on("click", function(){
 
   if (validateForm() == true) {
 
-  for(i=0; i <13; i++){
+  for (i=0; i < 13; i++){
       $.each($("input[name='question-" + i + "']:checked"), function() {
       score += parseInt($(this).val());
      });
@@ -297,8 +297,10 @@ $("#submit").on("click", function(){
 		// $('#matchImg').attr("src", data.photo);
 		// Show the modal window with the best match
 		// $("#resultsModal").modal('toggle');
+		location.reload();
 		console.log(data);
 	});
+	location.reload();
 } else {
 	alert("Please fill out all fields before submitting the survey!");
 	}
