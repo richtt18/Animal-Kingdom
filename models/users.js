@@ -22,6 +22,11 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER,
         allowNull: false,
         len: [1]
+      },
+      animal: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        len: [1]
       }
     });
   

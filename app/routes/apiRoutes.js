@@ -40,7 +40,8 @@ module.exports = function(app) {
       name: req.body.name,
       email: req.body.email,
       location: req.body.location,
-      score: req.body.score
+      score: req.body.score,
+      animal: req.body.animal
     })
       .then(function(dbUser) {
         res.json(dbUser);

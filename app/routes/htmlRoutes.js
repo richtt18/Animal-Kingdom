@@ -20,11 +20,15 @@ module.exports = function(app) {
   });
 
   app.get("/survey2", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/survey2.html"));
+    res.sendFile(path.join(__dirname, "../public/survey2.html"));
   });
   // If no matching route is found default to home
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/home.html"));
+  app.get("/", function(req, res) {
+   res.sendFile(path.join(__dirname, "/../public/home.html"));
+  });
+
+  app.get("/result", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/result.html"));
   });
 
 };
