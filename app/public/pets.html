@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    <h1>pets</h1>
+
+  </body>
+  <script type="text/javascript">
+  var settings = {
+"async": true,
+"crossDomain": true,
+"url": "https://test-api.rescuegroups.org/v5/public/animals/search/available/cats?include=breeds,colors,fosters,locations,orgs,patterns,pictures,species,videos,videourls&fields[animals]=name,sex&fields[orgs]=name,email,url,facebookUrl,adoptionUrl&fields[breeds]=name&fields[colors]=name&fields[fosters]=name,email&fields[locations]=name&fields[patterns]=name&fields[pictures]=large,small&fields[species]=singular&fields[videos]=url&fields[videourls]=url,urlThumbnail&options=meta",
+"method": "GET",
+"headers": {
+  "Content-Type": "application/vnd.api+json",
+  "Authorization": "Vn0k5eor",
+}
+}
+
+$.ajax(settings).done(function (response) {
+console.log(response);
+});
+  </script>
+
+</html>

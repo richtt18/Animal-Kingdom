@@ -12,6 +12,14 @@ var db = require("../../models");
 // =============================================================
 module.exports = function(app) {
 
+var pet_data = require('./pets1.json');
+
+  app.get('/api/pets', function(req, res){
+    res.json(pet_data)
+  })
+
+
+
   // GET route for getting all of the users
   app.get("/api/users/", function(req, res) {
     db.User.findAll({})
