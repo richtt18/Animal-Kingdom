@@ -72,6 +72,7 @@ $("#submit").on("click", function(){
           // location.reload();
           console.log(data);
       });
+      alert(animal);
       // location.reload();
   } else {
       alert("Please fill out all fields before submitting the survey!");

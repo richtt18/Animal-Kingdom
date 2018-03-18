@@ -29,6 +29,21 @@
 $.ajax(settings).done(function (response) {
 console.log(response);
 });
+
+var thing = {"apikey":"Vn0k5eor","objectType":"animals","objectAction":"publicSearch","search":{"calcFoundRows":"Yes","resultStart":0,"resultLimit":5,"fields":["animalName"],"filters":[{"fieldName":"animalStatus","operation":"equals","criteria":"Adopted"},{"fieldName":"animalOrgID","operation":"equals","criteria":"****"}]}};
+var encoded = $.getJSON(thing);
+ 
+$.ajax({
+  url: "https://api.rescuegroups.org/http/json/?data=" + encoded, 
+  dataType: "jsonp",
+  success: function(data) {
+        if (data.foundRows) document.getElementById('adoptedPetsCount').innerHTML = data.foundRows;
+        console.log(data);
+  },
+  error: function(xhr, status, error) {
+    console.log('error');
+  }
+}); 
   </script>
 
 </html>
