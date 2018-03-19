@@ -48,6 +48,7 @@ $("#submit").on("click", function(){
     
         var currentURL = window.location.origin;
       // AJAX POST to the data to the friends.js API.
+
       $.ajax({
         method: "PUT",
         url: "/api/users/" + id,
@@ -56,6 +57,7 @@ $("#submit").on("click", function(){
         .then(function() {
           window.location.href = "/profile";
         });
+
       // location.reload();
   } else {
       alert("Please fill out all fields before submitting the survey!");
