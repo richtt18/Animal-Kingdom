@@ -25,7 +25,7 @@ module.exports = function(app) {
   app.get("/api/users/:id", function(req, res) {
     db.User.findOne({
       where: {
-        id: req.params.id
+        id: req.body.id
       }
     })
       .then(function(dbUser) {
@@ -52,7 +52,7 @@ module.exports = function(app) {
   app.delete("/api/users/:id", function(req, res) {
     db.User.destroy({
       where: {
-        id: req.params.id
+        id: req.body.id
       }
     })
       .then(function(dbUser) {
@@ -61,7 +61,7 @@ module.exports = function(app) {
   });
 
   // PUT route for updating users
-  app.put("/api/users", function(req, res) {
+  app.put("/api/users/:id", function(req, res) {
     db.User.update(req.body,
       {
         where: {
@@ -72,4 +72,49 @@ module.exports = function(app) {
         res.json(dbUser);
       });
   });
+//PETS API
+
+// GET route for getting all of the users
+app.get("/api/pets", function(req, res) {
+  var query = {};
+  if (req.query.user_id) {
+    query.UserId = req.query.user_id;
+  }
+  // Here we add an "include" property to our options in our findAll query
+  // We set the value to an array of the models we want to include in a left outer join
+  // In this case, just db.Author
+  db.Pet.findAll({
+    where: query,
+    include: [db.User]
+  }).then(function(dbPet) {
+    res.json(dbPet);
+  });
+});
+
+app.get("/api/pets/:id", function(req, res) {
+  // Here we add an "include" property to our options in our findOne query
+  // We set the value to an array of the models we want to include in a left outer join
+  // In this case, just db.Author
+  db.Pet.findOne({
+    where: {
+      id: req.body.id
+    },
+    include: [db.User]
+  }).then(function(dbPet) {
+    res.json(dbPet);
+  });
+});
+
+app.post("/api/pets", function(req, res) {
+  console.log(req.body);
+  db.Pet.create(req.body)
+    .then(function(dbPet) {
+      console.log("Here!")
+      res.json(dbPet);
+    });
+});
+
+
+
 };
+
