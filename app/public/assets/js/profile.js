@@ -6,6 +6,6 @@ $(document).ready(function(){
     $.get(currentURL + "/api/users/" + id, function(data){
        console.log(id);
         console.log(data);
-         
+         console.log(currentURL);
     });
 })
