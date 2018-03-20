@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sign up</title>
+
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="author" content="Julie Hoffman">
+
+		<!-- Link to current min version of bootstrap and jquery library -->
+		<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+      <link rel="stylesheet" href="assets/css/custom.css">
+		
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	</head>
+
+	<body>
+		<section class="hero is-fullheight is-default is-bold">
+				<div class="hero-head">
+						<nav class="navbar">
+						  <div class="container">
+							<div class="navbar-brand">
+							  <a class="navbar-item" href="./home.html">
+								<img src="https://image.ibb.co/i7FW4c/images_1.jpg" alt="images_1" border="0">
+							  </a>
+							  <span class="navbar-burger burger" data-target="navbarMenu">
+							  </span>
+							</div>
+							<div id="navbarMenu" class="navbar-menu">
+					 <div class="navbar-end"><div class="tabs is-right">
+					  <ul>
+						<li><a href="home.html">Home</a></li>
+					
+						<li><a href="">Dog</a></li>
+						<li><a href="">Cat</a></li>
+						<li><a href="results.html">Results</a></li>
+						<li><a href="survey2.html">Survey</a></li>
+						<li class="is-active"><a href="signup.html">Sign up</a></li>
+						<li><a id="signIn">Sign in</a></li>
+					
+					  </ul>
+					</div>
+							  </div>
+							</div>
+						  </div>
+						</nav>
+					  </div>
+			<!-- Begin the bootstrap container -->
+			<div class="container">
+
+
+				<!-- Begin user input -->
+				<h3><strong>ABOUT YOU</strong></h3>
+				<div class="field">
+					<label class="label">Full Name</label>
+					<div class="control">
+						<input class="input form-control" type="text" placeholder="Full Name" id="name">
+					</div>
+				</div>
+
+				<div class="field">
+					<label class="label">Email</label>
+					<div class="control">
+						<input class="input form-control" type="email" placeholder="Email" id="email">
+					</div>
+        </div>
+        
+        <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input class="input form-password" type="password" placeholder="Password" id="password">
+            </div>
+          </div>
+
+        <div class="field">
+            <label class="label">Confirm Password</label>
+            <div class="control">
+              <input class="input form-password" type="password" placeholder="Confirm Password" id="confirmPassword">
+            </div>
+          </div><br>
+        <h3><strong>ADDRESS</strong></h3><br>
+				<div class="field">
+          <label class="label">Address Line</label>
+          <div class="control">
+            <input class="input form-control" type="text" placeholder="Address Line" id="addressLine">
+          </div>
+        </div>
+
+       <div class="field">
+            <label for="inputCity" class="label">City/State</label>
+            <div class="control">
+              <input class="input form-control" type="text" class="animated slideInRight
+                userCityFormat border rounded-right text-center" id="inputCity"
+                placeholder="City/State">
+            </div>
+          </div>
+      <div class="field">
+          <label class="label">Postcode</label>
+          <div class="control">
+            <input class="input form-control" type="number" placeholder="Postcode" id="postCode">
+          </div>
+        </div>
+				<div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" id="signUp">Sign Up</button>
+            </div>
+			</div>
+			<div class="container modal-container" id="app">
+					<div class="modal">
+					  <div class="modal-background"></div>
+					  <div class="modal-content">
+						 <div class="hero-body">
+							  <div class="container has-text-centered">
+								 <h6 class="title is-5 has-text-grey">Sign in</h6>
+								   <div class="box">
+									<figure class="avatar">
+									  <img  src="assets/images/images-1.jpg" id="imgAvatar">
+									</figure>
+									<form>
+									  <div class="field">
+										<div class="control">
+										  <input class="input is-medium" type="email" placeholder="Your Email" autofocus="">
+										</div>
+									  </div>
+						
+									  <div class="field">
+										<div class="control">
+										  <input class="input is-medium" type="password" placeholder="Your Password">
+										</div>
+									  </div>
+									  <div class="field">
+										<label class="checkbox">
+										  <input type="checkbox">
+										  Remember me
+										</label>
+									  </div>
+									  <button class="button is-block is-info is-medium is-fullwidth" id="loginButton">Login</button><br>
+									  <button class="button is-block is-info is-medium is-fullwidth" id="cancelButton">Cancel</button>
+									</form>
+								  </div>
+								 
+							  </div>
+							</div>
+					  </div>
+					  <button class="modal-close"></button>
+					</div>       
+				  </div>
+		</section>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		function gAutoComplete() {
+        var locInput = document.getElementById("inputCity");
+        var options = {
+          types: ["(cities)"],
+          componentRestrictions: {
+            country: "us"
+          }
+        };
+        var autocomplete = new google.maps.places.Autocomplete(locInput, options);
+	  }
+	  </script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCBCVEBvtLtjpWQfrU96srHskWk4V4Azzo&libraries=places&callback=gAutoComplete"></script>
+	<script  type="text/javascript" src="/assets/js/survey.js"></script>
+	<script  type="text/javascript" src="/assets/js/login.js"></script>
+	</body>
+</html>

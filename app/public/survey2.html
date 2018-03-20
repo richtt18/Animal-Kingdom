@@ -10,72 +10,53 @@
 		<!-- Link to current min version of bootstrap and jquery library -->
 		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+			<link rel="stylesheet" href="assets/css/custom.css">
 		
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
 
 	<body>
 		<section class="hero is-fullheight is-default is-bold">
-			<div class="hero-head">
-				<nav class="navbar">
-					<div class="container">
-						<div class="navbar-brand">
-							<a class="navbar-item" href="home.html">
-								<img src="https://image.ibb.co/i7FW4c/images_1.jpg" alt="images_1"
-									border="0">
-							</a>
-							<span class="navbar-burger burger" data-target="navbarMenu">
-								<span></span>
-								<span></span>
-								<span></span>
-							</span>
-						</div>
-						<div id="navbarMenu" class="navbar-menu">
-							<div class="navbar-end"><div class="tabs is-right">
-									<ul>
-										<li><a href="home.html">Home</a></li>
-										<li><a href="">DOGS</a></li>
-										<li><a href="">CATS</a></li>
-										<li><a href="results.html">Results</a></li>
-										<li><a href="survey2.html">Survey</a></li>
-										<li><a href="login.html">log in</a></li>
-										<li><a href="">log out</a></li>
 
-									</ul>
-								</div>
+				<div class="hero-head">
+						<nav class="navbar">
+						  <div class="container">
+							<div class="navbar-brand">
+							  <a class="navbar-item" href="./home.html">
+								<img src="https://image.ibb.co/i7FW4c/images_1.jpg" alt="images_1" border="0">
+							  </a>
+							  <span class="navbar-burger burger" data-target="navbarMenu">
+								<span></span>
+								<span></span>
+								<span></span>
+							  </span>
+
 							</div>
-						</div>
+							<div id="navbarMenu" class="navbar-menu">
+					 <div class="navbar-end"><div class="tabs is-right">
+					  <ul>
+						<li><a href="home.html">Home</a></li>
+					
+						<li><a href="">Dog</a></li>
+						<li><a href="">Cat</a></li>
+						<li><a href="results.html">Results</a></li>
+						<li  class="is-active"><a href="survey2.html">Survey</a></li>
+						<li><a href="signup.html">Sign up</a></li>
+						<li><a id="signIn">Sign in</a></li>
+					
+					  </ul>
 					</div>
-				</nav>
-			</div>
+							  </div>
+							</div>
+						  </div>
+						</nav>
+					  </div>
 			<!-- Begin the bootstrap container -->
 			<div class="container">
 
 
 				<!-- Begin user input -->
-				<h3><strong>ABOUT YOU</strong></h3>
-				<div class="field">
-					<label class="label">Full name</label>
-					<div class="control">
-						<input class="input form-control" type="text" placeholder="Text input" id="name">
-					</div>
-				</div>
 
-				<div class="field">
-					<label class="label">Email</label>
-					<div class="control">
-						<input class="input form-email" type="email" placeholder="Email input" id="email">
-					</div>
-				</div>
-
-				<div class="field">
-					<label for="inputCity" class="label">City</label>
-					<div class="control">
-						<input class="input form-control" type="text" class="animated slideInRight
-							userCityFormat border rounded-right text-center" id="inputCity"
-							placeholder="Enter a City">
-					</div>
-				</div>
 				<br>
 				<h2>Survey Questions:</h2>
 				<hr>
@@ -196,48 +177,57 @@
 				<br>
 
 				<!-- Submit Button -->
-				<button class="button is-info is-focused" id="submit"><a href="/result">SUBMIT</a></button>
+				<button class="button is-info is-focused" id="submit">SUBMIT</button>
 
 
 				<!-- End the bootstrap container -->
 			</div>
 
-			<!-- Modal -->
-			<div id="resultsModal" class="modal fade" role="dialog">
-				<div class="modal-dialog">
-
-					<!-- Modal content-->
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h2 class="modal-title"><strong>Your Best Study Friend Match!</strong></h2>
-						</div>
-						<div class="modal-body">
-							<h2 id="matchName"></h2>
-
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-
-				</div>
-			</div>
+			<div class="container modal-container" id="app">
+					<div class="modal">
+					  <div class="modal-background"></div>
+					  <div class="modal-content">
+						 <div class="hero-body">
+							  <div class="container has-text-centered">
+								 <h6 class="title is-5 has-text-grey">Sign in</h6>
+								   <div class="box">
+									<figure class="avatar">
+									  <img  src="assets/images/images-1.jpg" id="imgAvatar">
+									</figure>
+									<form>
+									  <div class="field">
+										<div class="control">
+										  <input class="input is-medium" type="email" placeholder="Your Email" autofocus="">
+										</div>
+									  </div>
+						
+									  <div class="field">
+										<div class="control">
+										  <input class="input is-medium" type="password" placeholder="Your Password">
+										</div>
+									  </div>
+									  <div class="field">
+										<label class="checkbox">
+										  <input type="checkbox">
+										  Remember me
+										</label>
+									  </div>
+									  <button class="button is-block is-info is-medium is-fullwidth" id="loginButton">Login</button><br>
+									  <button class="button is-block is-info is-medium is-fullwidth" id="cancelButton">Cancel</button>
+									</form>
+								  </div>
+								 
+							  </div>
+							</div>
+					  </div>
+					  <button class="modal-close"></button>
+					</div>       
+				  </div>
 		</section>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script>
-		function gAutoComplete() {
-        var locInput = document.getElementById("inputCity");
-        var options = {
-          types: ["(cities)"],
-          componentRestrictions: {
-            country: "us"
-          }
-        };
-        var autocomplete = new google.maps.places.Autocomplete(locInput, options);
-	  }
-	  </script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCBCVEBvtLtjpWQfrU96srHskWk4V4Azzo&libraries=places&callback=gAutoComplete"></script>
+		
+	<script  type="text/javascript" src="/assets/js/survey.js"></script>
+	<script  type="text/javascript" src="/assets/js/login.js"></script>
 
 	</body>
 </html>
