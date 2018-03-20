@@ -25,7 +25,7 @@ module.exports = function(app) {
   app.get("/api/users/:id", function(req, res) {
     db.User.findOne({
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     })
       .then(function(dbUser) {
@@ -65,7 +65,7 @@ module.exports = function(app) {
     db.User.update(req.body,
       {
         where: {
-          id: req.body.id
+          id: req.params.id
         }
       })
       .then(function(dbUser) {
