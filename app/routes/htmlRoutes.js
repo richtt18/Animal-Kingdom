@@ -32,7 +32,7 @@ module.exports = function(app) {
   });
 
   app.get("/result", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/survey.html"));
+    res.sendFile(path.join(__dirname, "/../public/results.html"));
   });
 
 };
