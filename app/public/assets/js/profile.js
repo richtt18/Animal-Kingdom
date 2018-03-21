@@ -7,5 +7,10 @@ $(document).ready(function(){
        console.log(id);
         console.log(data);
          console.log(currentURL);
+         $.get(currentURL + "/api/pets", function(data){
+            console.log(data);
+        })
     });
+
+   
 })

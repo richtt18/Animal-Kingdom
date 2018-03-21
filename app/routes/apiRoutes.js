@@ -20,13 +20,29 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/api/users/login", function(req, res) {
+
+    console.log(req.query);
+    db.User.findAll({
+      where: {
+        email: req.query.email
+      }
+    })
+      .then(function(dbUser) {
+        console.log( dbUser[0].dataValues.password + " " + req.query.password);
+        if (req.query.password == dbUser[0].dataValues.password){
+          console.log(dbUser);
+          console.log(dbUser[0].dataValues.password + " " + req.query.password)
+        res.json(dbUser);
+      } 
+      });
+  });
 
   // Get rotue for retrieving a single post
   app.get("/api/users/:id", function(req, res) {
     db.User.findOne({
       where: {
-      
-        id: req.params.id
+       id: req.params.id
       }
     })
       .then(function(dbUser) {
@@ -37,13 +53,7 @@ module.exports = function(app) {
   // POST route for saving a new post
   app.post("/api/users", function(req, res) {
     console.log(req.body);
-    db.User.create({
-      name: req.body.name,
-      email: req.body.email,
-      location: req.body.location,
-      score: req.body.score,
-      animal: req.body.animal
-    })
+    db.User.create(req.body)
       .then(function(dbUser) {
         res.json(dbUser);
       });
