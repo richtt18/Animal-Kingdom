@@ -86,9 +86,10 @@ $("#loginButton").on("click", function(){
     }
   
   if( loginEmail != "" && loginPassword != "" ){
-    $.get(currentURL + "/api/users/login", userLoginData, function(data){
+    $.post(currentURL + "/api/users/login", userLoginData, function(data){
         console.log("here");
          alert(data);
+         console.log(data);
          sessionStorage.clear();
          sessionStorage.setItem("id", data.id);
         

@@ -7,7 +7,11 @@
 
 // Requiring our Todo model
 var db = require("../../models");
+// var petfinder = require('petfinder')('f6480370e828119484f2e9fb63e62b27','856eab142065e7802e97231a814a1492');
 
+// petfinder.findPet('Washington, DC', "cat", function(err, breeds) {
+//   console.log(breeds)
+// });
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -20,21 +24,24 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/users/login", function(req, res) {
+  app.post("/api/users/login", function(req, res) {
 
-    console.log(req.query);
-    db.User.findAll({
+    console.log(req.body.email);
+    db.User.findOne({
       where: {
-        email: req.query.email
+        email: req.body.email
       }
     })
       .then(function(dbUser) {
-        console.log( dbUser[0].dataValues.password + " " + req.query.password);
-        if (req.query.password == dbUser[0].dataValues.password){
-          console.log(dbUser);
-          console.log(dbUser[0].dataValues.password + " " + req.query.password)
+        // console.log( dbUser[0].dataValues.password + " " + req.query.password);
+        // // if (req.query.password == dbUser[0].dataValues.password){
+        //   console.log(dbUser);
+        //   console.log(dbUser[0].dataValues.password + " " + req.query.password)
         res.json(dbUser);
-      } 
+        console.log(dbUser);
+      // } else {
+      //   res.json(dbUser);
+      // }
       });
   });
 
@@ -89,16 +96,12 @@ module.exports = function(app) {
 
 // GET route for getting all of the users
 app.get("/api/pets", function(req, res) {
-  var query = {};
-  if (req.query.user_id) {
-    query.UserId = req.query.user_id;
-  }
-  // Here we add an "include" property to our options in our findAll query
-  // We set the value to an array of the models we want to include in a left outer join
-  // In this case, just db.Author
+  
   db.Pet.findAll({
-    where: query,
-    include: [db.User]
+    where: { 
+      UserId: req.query.userId
+    },
+    
   }).then(function(dbPet) {
     res.json(dbPet);
   });
