@@ -62,10 +62,7 @@ $("#signUp").on("click", function(){
                 sessionStorage.clear();
                 // Store all content into sessionStorage
                 sessionStorage.setItem("id", data.id);
-                sessionStorage.setItem("name", data.name);
-                sessionStorage.setItem("email", data.email);
-                sessionStorage.setItem("location", data.location);
-                sessionStorage.setItem("animal", data.animal);
+
                 window.location.href = "profile.html"
               
           });
@@ -75,4 +72,28 @@ $("#signUp").on("click", function(){
           }
       
           return false;
+})
+
+$("#loginButton").on("click", function(){
+    var loginEmail = $("#loginEmail").val();
+    var loginPassword = $("#loginPassword").val();
+    var currentURL = window.location.origin;
+    console.log(loginEmail, loginPassword);
+
+    var userLoginData = {
+        email: loginEmail,
+        password: loginPassword
+    }
+  
+  if( loginEmail != "" && loginPassword != "" ){
+    $.get(currentURL + "/api/users/login", userLoginData, function(data){
+        console.log("here");
+         alert(data);
+         sessionStorage.clear();
+         sessionStorage.setItem("id", data.id);
+        
+
+
+     });
+        }
 })

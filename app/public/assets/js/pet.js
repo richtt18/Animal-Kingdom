@@ -24,6 +24,6 @@ $("#addPet").on("click", function(){
         console.log(data);
       
   });
-
+  window.location.href = "/profile";
 })
 
