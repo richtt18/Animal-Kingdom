@@ -7,11 +7,11 @@
 
 // Requiring our Todo model
 var db = require("../../models");
-// var petfinder = require('petfinder')('f6480370e828119484f2e9fb63e62b27','856eab142065e7802e97231a814a1492');
+var petfinder = require('petfinder')('f6480370e828119484f2e9fb63e62b27','856eab142065e7802e97231a814a1492');
 
-// petfinder.findPet('Washington, DC', "cat", function(err, breeds) {
-//   console.log(breeds)
-// });
+petfinder.getRandomPet("Washington, DC", "cat", function(err, breeds) {
+  console.log(breeds)
+});
 // Routes
 // =============================================================
 module.exports = function(app) {
