@@ -30,15 +30,12 @@
 							<div id="navbarMenu" class="navbar-menu">
 					 <div class="navbar-end"><div class="tabs is-right">
 					  <ul>
-						<li><a href="home.html">Home</a></li>
-					
-						<li><a href="">Dog</a></li>
-						<li><a href="">Cat</a></li>
-						<li><a href="results.html">Results</a></li>
-						<li><a href="survey2.html">Survey</a></li>
-						<li class="is-active"><a href="signup.html">Sign up</a></li>
-						<li><a id="signIn">Sign in</a></li>
-					
+								<li><a href="home.html">Home</a></li>
+								<li><a href="dog.html">Dog</a></li>
+								<li><a href="cat.html">Cat</a></li>
+								<li><a href="profile.html">Profile</a></li>
+								<li class="is-active"><a href="signup.html">Sign up</a></li>
+								<li><a id="signIn">Sign in</a></li>
 					  </ul>
 					</div>
 							  </div>
@@ -96,9 +93,9 @@
             </div>
           </div>
       <div class="field">
-          <label class="label">Postcode</label>
+          <label class="label">Phone</label>
           <div class="control">
-            <input class="input form-control" type="number" placeholder="Postcode" id="postCode">
+            <input class="input form-control" type="number" placeholder="Phone" id="phone">
           </div>
         </div>
 				<div class="field is-grouped">
@@ -108,44 +105,44 @@
 			</div>
 			<div class="container modal-container" id="app">
 					<div class="modal">
-					  <div class="modal-background"></div>
-					  <div class="modal-content">
-						 <div class="hero-body">
-							  <div class="container has-text-centered">
-								 <h6 class="title is-5 has-text-grey">Sign in</h6>
-								   <div class="box">
-									<figure class="avatar">
-									  <img  src="assets/images/images-1.jpg" id="imgAvatar">
-									</figure>
-									<form>
-									  <div class="field">
-										<div class="control">
-										  <input class="input is-medium" type="email" placeholder="Your Email" autofocus="">
+						<div class="modal-background"></div>
+						<div class="modal-content">
+							 <div class="hero-body">
+										<div class="container has-text-centered">
+											 <h6 class="title is-5 has-text-grey">Sign in</h6>
+												 <div class="box">
+													<figure class="avatar">
+														<img  src="assets/images/images-1.jpg" id="imgAvatar">
+													</figure>
+													<form>
+														<div class="field">
+															<div class="control">
+																<input class="input is-medium" type="email" placeholder="Your Email" autofocus="" id="loginEmail">
+															</div>
+														</div>
+							
+														<div class="field">
+															<div class="control">
+																<input class="input is-medium" type="password" placeholder="Your Password" id="loginPassword">
+															</div>
+														</div>
+														<div class="field">
+															<label class="checkbox">
+																<input type="checkbox">
+																Remember me
+															</label>
+														</div>
+														<button class="button is-block is-info is-medium is-fullwidth" id="loginButton">Login</button><br>
+														<button class="button is-block is-info is-medium is-fullwidth" id="cancelButton">Cancel</button>
+													</form>
+												</div>
+											 
 										</div>
-									  </div>
-						
-									  <div class="field">
-										<div class="control">
-										  <input class="input is-medium" type="password" placeholder="Your Password">
-										</div>
-									  </div>
-									  <div class="field">
-										<label class="checkbox">
-										  <input type="checkbox">
-										  Remember me
-										</label>
-									  </div>
-									  <button class="button is-block is-info is-medium is-fullwidth" id="loginButton">Login</button><br>
-									  <button class="button is-block is-info is-medium is-fullwidth" id="cancelButton">Cancel</button>
-									</form>
-								  </div>
-								 
-							  </div>
-							</div>
-					  </div>
-					  <button class="modal-close"></button>
+									</div>
+						</div>
+						<button class="modal-close"></button>
 					</div>       
-				  </div>
+				</div>
 		</section>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>

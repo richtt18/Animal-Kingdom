@@ -31,8 +31,22 @@ module.exports = function(app) {
    res.sendFile(path.join(__dirname, "/../public/home.html"));
   });
 
-  app.get("/pets", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/pets.html"));
+
+  app.get("/profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/profile.html"));
+  });
+
+  app.get("/pet", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/pet.html"));
+  });
+
+  app.get("/dog", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/dog.html"));
+  });
+
+  app.get("/result", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/survey.html"));
+
   });
 
   app.get("/loader", function(req, res) {

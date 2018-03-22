@@ -64,8 +64,8 @@
 					<label class="label">Pet</label>
 					<div class="select">
                             <select  id="pet">
-                              <option>Dog</option>
-                              <option>Cat</option>
+                              <option>dog</option>
+                              <option>cat</option>
                             </select>
                  </div>
 				</div>
@@ -81,13 +81,19 @@
             <label class="label">Age</label>
             <div class="select">
                     <select  id="age">
-                      <option>Pupy</option>
-                      <option>Young</option>
-                      <option>Adult</option>
-                      <option>Senior</option>
+                      <option>baby</option>
+                      <option>young</option>
+                      <option>adult</option>
+                      <option>senior</option>
                     </select>
                   </div>
-          </div><br>
+					</div><br>
+					<div class="field">
+							<label class="label">Image URL</label>
+							<div class="control">
+								<input class="input form-text" type="text" placeholder="Image URL" id="image">
+							</div>
+						</div><br>
           <div class="field">
                 <label class="label">Description</label>
                 <div class="control">
@@ -102,44 +108,44 @@
 			</div>
 			<div class="container modal-container" id="app">
 					<div class="modal">
-					  <div class="modal-background"></div>
-					  <div class="modal-content">
-						 <div class="hero-body">
-							  <div class="container has-text-centered">
-								 <h6 class="title is-5 has-text-grey">Sign in</h6>
-								   <div class="box">
-									<figure class="avatar">
-									  <img  src="assets/images/images-1.jpg" id="imgAvatar">
-									</figure>
-									<form>
-									  <div class="field">
-										<div class="control">
-										  <input class="input is-medium" type="email" placeholder="Your Email" autofocus="">
+						<div class="modal-background"></div>
+						<div class="modal-content">
+							 <div class="hero-body">
+										<div class="container has-text-centered">
+											 <h6 class="title is-5 has-text-grey">Sign in</h6>
+												 <div class="box">
+													<figure class="avatar">
+														<img  src="assets/images/images-1.jpg" id="imgAvatar">
+													</figure>
+													<form>
+														<div class="field">
+															<div class="control">
+																<input class="input is-medium" type="email" placeholder="Your Email" autofocus="" id="loginEmail">
+															</div>
+														</div>
+							
+														<div class="field">
+															<div class="control">
+																<input class="input is-medium" type="password" placeholder="Your Password" id="loginPassword">
+															</div>
+														</div>
+														<div class="field">
+															<label class="checkbox">
+																<input type="checkbox">
+																Remember me
+															</label>
+														</div>
+														<button class="button is-block is-info is-medium is-fullwidth" id="loginButton">Login</button><br>
+														<button class="button is-block is-info is-medium is-fullwidth" id="cancelButton">Cancel</button>
+													</form>
+												</div>
+											 
 										</div>
-									  </div>
-						
-									  <div class="field">
-										<div class="control">
-										  <input class="input is-medium" type="password" placeholder="Your Password">
-										</div>
-									  </div>
-									  <div class="field">
-										<label class="checkbox">
-										  <input type="checkbox">
-										  Remember me
-										</label>
-									  </div>
-									  <button class="button is-block is-info is-medium is-fullwidth" id="loginButton">Login</button><br>
-									  <button class="button is-block is-info is-medium is-fullwidth" id="cancelButton">Cancel</button>
-									</form>
-								  </div>
-								 
-							  </div>
-							</div>
-					  </div>
-					  <button class="modal-close"></button>
+									</div>
+						</div>
+						<button class="modal-close"></button>
 					</div>       
-				  </div>
+				</div>
 		</section>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
