@@ -11,3 +11,5 @@ if it's not present, don't show loader */
 	height: 100%;
 	z-index: 9999;
 	background: url(../images/loader3.gif) center no-repeat #fff;
+		
+	}
