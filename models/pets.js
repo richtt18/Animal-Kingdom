@@ -23,7 +23,17 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         len: [1]
       },
+      petImage: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        len: [1]
+      },
       petDescription: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        len: [1]
+      },
+      petLocation: {
         type: DataTypes.STRING,
         allowNull: false,
         len: [1]

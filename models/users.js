@@ -18,7 +18,17 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         len: [1]
       },
+      addressLine: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        len: [1]
+      },
       location: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        len: [1]
+      },
+      phone: {
         type: DataTypes.STRING,
         allowNull: false,
         len: [1]

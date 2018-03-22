@@ -3,7 +3,9 @@ $("#addPet").on("click", function(){
     var petBreed = $("#breed").val() 
     var petType = $("#pet").val();
     var petAge = $("#age").val();
+    var petImage = $("#image").val();
     var petDescription = $("#description").val();
+    var petLocation = sessionStorage.getItem("location");
     var UserId = sessionStorage.getItem("id");
     console.log(UserId);
 
@@ -13,7 +15,9 @@ $("#addPet").on("click", function(){
         petBreed: petBreed,
         petType: petType,
         petAge: petAge,
+        petImage: petImage,
         petDescription: petDescription,
+        petLocation: petLocation,
         UserId: UserId
     }
     console.log(petData);
