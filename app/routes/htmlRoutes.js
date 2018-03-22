@@ -34,8 +34,10 @@ module.exports = function(app) {
 
   app.get("/pet", function(req, res) {
     res.sendFile(path.join(__dirname, "/../public/pet.html"));
+  });
 
-
+  app.get("/dog", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/dog.html"));
   });
 
   app.get("/result", function(req, res) {

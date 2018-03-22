@@ -49,7 +49,7 @@ $("#signUp").on("click", function(){
             password: $("#password").val(),
             addressLine: $("#addressLine").val(),
             location: $("#inputCity").val(),
-            posdCode: $("#postCode").val(),
+            phone: $("#phone").val(),
             score: -1,
             animal: ""
         };
@@ -62,6 +62,7 @@ $("#signUp").on("click", function(){
                 sessionStorage.clear();
                 // Store all content into sessionStorage
                 sessionStorage.setItem("id", data.id);
+                sessionStorage.setItem("location", data.location);
 
                 window.location.href = "profile.html"
               
@@ -92,6 +93,7 @@ $("#loginButton").on("click", function(){
          console.log(data);
          sessionStorage.clear();
          sessionStorage.setItem("id", data.id);
+         sessionStorage.setItem("location", data.location);
         
 
 

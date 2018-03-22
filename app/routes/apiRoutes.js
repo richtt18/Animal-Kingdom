@@ -31,23 +31,23 @@ module.exports = function(app) {
   });
 
   app.post("/api/users/login", function(req, res) {
-
-    console.log(req.body.email);
     db.User.findOne({
       where: {
         email: req.body.email
-      }
+      },
+      include: [db.Pet]
     })
       .then(function(dbUser) {
-        // console.log( dbUser[0].dataValues.password + " " + req.query.password);
-        // // if (req.query.password == dbUser[0].dataValues.password){
-        //   console.log(dbUser);
-        //   console.log(dbUser[0].dataValues.password + " " + req.query.password)
+        console.log(dbUser);
+        if (req.query.password == dbUser.password){
         res.json(dbUser);
         console.log(dbUser);
-      // } else {
-      //   res.json(dbUser);
-      // }
+      } else {
+        res.json(dbUser);
+      }
+      })
+      .catch(function(err){
+        console.log('Error: ' + err.message);
       });
   });
 
@@ -56,7 +56,8 @@ module.exports = function(app) {
     db.User.findOne({
       where: {
        id: req.params.id
-      }
+      },
+      include: [db.Pet]
     })
       .then(function(dbUser) {
         res.json(dbUser);
@@ -134,6 +135,23 @@ app.post("/api/pets", function(req, res) {
       console.log("Here!")
       res.json(dbPet);
     });
+});
+
+app.post("/api/pets/:animal", function(req, res) {
+ var attributes = ['phone', 'location', 'addressLine', 'email'];
+  db.Pet.findAll({
+      where: {
+      petType: req.params.animal,
+      petLocation: req.body.petLocation
+    },
+    include: [{model: db.User, attributes: attributes}]
+  })
+    .then(function(dbPet) {
+      res.json(dbPet);
+    })
+    .catch(function(err){
+      console.log('Error: ' + err.message);
+    });  
 });
 
 
