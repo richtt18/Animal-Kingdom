@@ -37,16 +37,14 @@
  <div class="navbar-end"><div class="tabs is-right">
   <ul>
         <li><a href="home.html">Home</a></li>
-        <li class="is-active" id="animalType"><a href="dog.html">Dog</a></li >
-        <li><a href="cat.html">Cat</a></li>
+        <li><a href="dog.html">Dog</a></li>
+        <li class="is-active"><a href="cat.html">Cat</a></li >
         <li ><a href="profile.html">Profile</a></li>
         <li><a href="signup.html">Sign up</a></li>
         <li><a id="signIn">Sign in</a></li>
 
   </ul>
-  <input type="hidden" id="animalType" value="dog">
-  
-</div>
+  <input type="hidden" id="animalType" value="cat">
           </div>
         </div>
       </div>
@@ -54,16 +52,12 @@
   </div>
     <div class="hero-body">
         <div class="container" >
-        <div class="row">
-          <div class"col">
-                <input class="input form-control" type="text"  id="inputCity" placeholder="City/State">
-              </div>
-              <div class"col">
-                <a class="button is-normal is-info is-outlined" href="/pet">
-                 Search
-                 </a>
-                </div>
-              </div>            
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Location" id="location" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </nav>
         </div>
     </div>
     <div class="container" >
@@ -126,18 +120,6 @@
   <!-- <script async type="text/javascript" src="../js/bulma.js"></script> -->
   <script  type="text/javascript" src="/assets/js/login.js"></script>
   <script  type="text/javascript" src="/assets/js/dog.js"></script>
-  <script>
-      function gAutoComplete() {
-          var locInput = document.getElementById("inputCity");
-          var options = {
-            types: ["(cities)"],
-            componentRestrictions: {
-              country: "us"
-            }
-          };
-          var autocomplete = new google.maps.places.Autocomplete(locInput, options);
-      }
-      </script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCBCVEBvtLtjpWQfrU96srHskWk4V4Azzo&libraries=places&callback=gAutoComplete"></script>
+
 </body>
 </html>

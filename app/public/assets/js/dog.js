@@ -1,11 +1,14 @@
 $(document).ready(function(){
    
     var currentURL = window.location.origin;
-    var petType = "dog";
+    var petType = $("input#animalType").val();
+    console.log(petType);
     var petLocation = sessionStorage.getItem("location");
     var pets = [];
     // AJAX POST to the data to the friends.js API.
-    
+    getData();
+
+  function getData(){ 
     var dogData = {
         petType: petType,
         petLocation: petLocation
@@ -29,12 +32,13 @@ $(document).ready(function(){
         console.log(pets);
         findInPetfinder();
     });
-
+} 
     function findInPetfinder(){
         var locationArray = petLocation.split(", ");
-        var location = locationArray[0] + "," + locationArray[1];
+        // var location = locationArray[0] + "," + locationArray[1];
+        var location = "Washington,DC"
         
-        var url = 'http://api.petfinder.com/pet.find?key=f6480370e828119484f2e9fb63e62b27&shelter&count=20&animal='
+        var url = 'http://api.petfinder.com/pet.find?key=f6480370e828119484f2e9fb63e62b27&shelter&count=30&animal='
         + petType +'&location=' + location + '&output=full&format=json';
         $.ajax({
             type : 'GET',
@@ -67,6 +71,7 @@ $(document).ready(function(){
                 }
                 console.log(data);
                 console.log(pets);
+                displayData();
             },
             error : function(request,error)
             {
@@ -74,4 +79,29 @@ $(document).ready(function(){
             }
         });
     }
-})
+    function displayData(){
+
+        for (i = 0; i < 24; i ++){
+            if (!pets[i].breed){
+                pets[i].breed = "Unknown";
+            }
+            $("#animal").append(`
+                       <div class="col-sm-3">
+                        <div class=" card-img-top animalCard" style="width: 16rem; heigth: 22rem">
+                            <img class="animal-img card-img-top" src="${pets[i].image}" alt="Card image cap">
+                            <div class="card-body">
+                            <h5 class="card-title"><strong> Name: ${pets[i].name}</strong></h5>
+                            <h6 class="card-title"> Breed: ${pets[i].breed}</h6>
+                            <p class="card-text">Location: ${pets[i].user.location}</p>
+                            </div>
+                    </div>
+               
+            </div>
+                  
+            `)
+        }
+    
+    }
+
+});
+

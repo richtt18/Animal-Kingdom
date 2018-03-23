@@ -25,3 +25,24 @@
     max-width: 50%;
 }
 
+.search{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+}
+
+.animal-img {
+    margin: 5px;
+    width:100%;
+    height: 230px;
+};
+
+.animalCard:hover{
+    box-shadow:
+    1px 1px #53a7ea,
+    2px 2px #53a7ea,
+    3px 3px #53a7ea;
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+  
+}

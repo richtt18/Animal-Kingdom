@@ -8,8 +8,10 @@ $("#signIn").on("click", function() {
   });
 
 $("#signUp").on("click", function(){
-    $(".form-control").removeClass("is-danger");
-    $(".form-password").removeClass("is-danger");
+    event.preventDefault();
+    console.log("Hello");
+    $(".form-control").removeClass("is-invalid");
+    $(".form-password").removeClass("is-invalid");
     
     function validateForm(){
         
@@ -20,7 +22,7 @@ $("#signUp").on("click", function(){
         var animal = "";
         var password = $("#password").val();
         var confirmPassword = $("#confirmPassword").val();
-        var posdCode = 
+        var phone = $("#phone").val();
     
         $('.form-control').each(function() {
             if ( $(this).val() === '' )
@@ -28,12 +30,12 @@ $("#signUp").on("click", function(){
             });
         
         if (!testEmail.test(email)){
-            $("#email").addClass("is-danger");
+            $("#email").addClass("is-invalid");
             return isValid = false;
         }
         
         if (password !== confirmPassword){
-            $("#confirmPassword, #password").addClass("is-danger");
+            $("#confirmPassword, #password").addClass("is-invalid");
             return isValid = false;
              
         }
@@ -76,6 +78,7 @@ $("#signUp").on("click", function(){
 })
 
 $("#loginButton").on("click", function(){
+    event.preventDefault();
     var loginEmail = $("#loginEmail").val();
     var loginPassword = $("#loginPassword").val();
     var currentURL = window.location.origin;
