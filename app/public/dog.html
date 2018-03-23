@@ -37,7 +37,7 @@
  <div class="navbar-end"><div class="tabs is-right">
   <ul>
         <li><a href="home.html">Home</a></li>
-        <li class="is-active" id="animalType"><a href="dog.html">Dog</a></li >
+        <li class="is-active" ><a href="dog.html">Dog</a></li >
         <li><a href="cat.html">Cat</a></li>
         <li ><a href="profile.html">Profile</a></li>
         <li><a href="signup.html">Sign up</a></li>
@@ -56,10 +56,10 @@
         <div class="container" >
         <div class="row">
           <div class"col">
-                <input class="input form-control" type="text"  id="inputCity" placeholder="City/State">
+                <input class="input form-control" type="text"  id="petInputCity" placeholder="City/State">
               </div>
               <div class"col">
-                <a class="button is-normal is-info is-outlined" href="/pet">
+                <a class="button is-normal is-info is-outlined" id="findPet" href="">
                  Search
                  </a>
                 </div>
@@ -67,8 +67,9 @@
         </div>
     </div>
     <div class="container" >
-        <div class="row"id="animal">
-  </div>
+    <div class="row" id="animal">
+        <img  src="assets/images/doge.jpg" id="imgDog">
+    </div>
 </div>
 
     <div class="hero-foot">
@@ -128,7 +129,7 @@
   <script  type="text/javascript" src="/assets/js/dog.js"></script>
   <script>
       function gAutoComplete() {
-          var locInput = document.getElementById("inputCity");
+          var locInput = document.getElementById("petInputCity");
           var options = {
             types: ["(cities)"],
             componentRestrictions: {

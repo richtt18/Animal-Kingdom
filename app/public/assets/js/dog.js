@@ -1,14 +1,32 @@
-$(document).ready(function(){
-   
+
     var currentURL = window.location.origin;
     var petType = $("input#animalType").val();
     console.log(petType);
     var petLocation = sessionStorage.getItem("location");
     var pets = [];
     // AJAX POST to the data to the friends.js API.
-    getData();
+   
+
+$("#findPet").on("click", function(){
+
+    event.preventDefault();
+    pets = [];
+    $("#animal").empty();
+    var location = $("#petInputCity").val();
+    if (location != ""){
+        sessionStorage.clear();
+        petLocation = location;
+        getData();
+    } else {
+        return;
+    }
+   
+})
 
   function getData(){ 
+
+    $("#imgDog").hide();
+  
     var dogData = {
         petType: petType,
         petLocation: petLocation
@@ -35,8 +53,8 @@ $(document).ready(function(){
 } 
     function findInPetfinder(){
         var locationArray = petLocation.split(", ");
-        // var location = locationArray[0] + "," + locationArray[1];
-        var location = "Washington,DC"
+        var location = locationArray[0] + "," + locationArray[1];
+        console.log(location);
         
         var url = 'https://api.petfinder.com/pet.find?key=f6480370e828119484f2e9fb63e62b27&shelter&count=30&animal='
         + petType +'&location=' + location + '&output=full&format=json';
@@ -79,6 +97,7 @@ $(document).ready(function(){
             }
         });
     }
+
     function displayData(){
 
         for (i = 0; i < 24; i ++){
@@ -86,7 +105,7 @@ $(document).ready(function(){
                 pets[i].breed = "Unknown";
             }
             $("#animal").append(`
-                       <div class="col-sm-3">
+                       <div class="animal-display col-sm-3">
                         <div class=" card-img-top animalCard" style="width: 16rem; heigth: 22rem">
                             <img class="animal-img card-img-top" src="${pets[i].image}" alt="Card image cap">
                             <div class="card-body">
@@ -103,5 +122,5 @@ $(document).ready(function(){
     
     }
 
-});
+
 
