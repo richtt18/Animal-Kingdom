@@ -38,7 +38,7 @@ $(document).ready(function(){
         // var location = locationArray[0] + "," + locationArray[1];
         var location = "Washington,DC"
         
-        var url = 'http://api.petfinder.com/pet.find?key=f6480370e828119484f2e9fb63e62b27&shelter&count=30&animal='
+        var url = 'https://api.petfinder.com/pet.find?key=f6480370e828119484f2e9fb63e62b27&shelter&count=30&animal='
         + petType +'&location=' + location + '&output=full&format=json';
         $.ajax({
             type : 'GET',
