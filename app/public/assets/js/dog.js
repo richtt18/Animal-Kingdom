@@ -1,20 +1,26 @@
 
-    var currentURL = window.location.origin;
-    var petType = $("input#animalType").val();
-    console.log(petType);
-    var petLocation = sessionStorage.getItem("location");
-    var pets = [];
-    // AJAX POST to the data to the friends.js API.
-   
+var currentURL = window.location.origin;
+var petType = $("input#animalType").val();
+console.log(petType);
+var petLocation = sessionStorage.getItem("location");
+var pets = [];
+// AJAX POST to the data to the friends.js API.
+console.log(petLocation);
 
+$(document).ready(function(){
+    if(petLocation){
+        getData();
+       
+    }
+});
+    
 $("#findPet").on("click", function(){
 
     event.preventDefault();
-    pets = [];
-    $("#animal").empty();
     var location = $("#petInputCity").val();
+
+    
     if (location != ""){
-        sessionStorage.clear();
         petLocation = location;
         getData();
     } else {
@@ -26,7 +32,17 @@ $("#findPet").on("click", function(){
   function getData(){ 
 
     $("#imgDog").hide();
-  
+    $("#animal").empty();
+    $("#locationId").empty();
+
+    $("#locationId").append(`
+
+    <div class="col">
+    <h3> ${petLocation}</h3>
+    </div>
+    `)
+
+    pets = [];
     var dogData = {
         petType: petType,
         petLocation: petLocation
@@ -119,7 +135,7 @@ $("#findPet").on("click", function(){
                   
             `)
         }
-    
+    sessionStorage.clear("location");
     }
 
 

@@ -1,5 +1,6 @@
 
-$("#signIn").on("click", function() {
+$(".signIn").on("click", function() {
+    event.preventDefault();
     $(".modal").addClass("is-active");  
   });
   
