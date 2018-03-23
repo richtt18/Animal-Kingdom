@@ -41,7 +41,7 @@
         <li class="is-active"><a href="cat.html">Cat</a></li>
         <li ><a href="profile.html">Profile</a></li>
         <li><a href="signup.html">Sign up</a></li>
-        <li><a id="signIn">Sign in</a></li>
+        <li><a class="signIn">Sign in</a></li>
 
   </ul>
   <input type="hidden" id="animalType" value="cat">
@@ -59,9 +59,11 @@
                 <input class="input form-control" type="text"  id="petInputCity" placeholder="City/State">
               </div>
               <div class"col">
-                <a class="button is-normal is-info is-outlined" id="findPet" href="">
+                <button class="button is-normal is-info is-outlined" id="findPet" type="submit">
                  Search
-                 </a>
+                </button>
+                </div>
+                <div class"col" id="locationId">
                 </div>
               </div>            
         </div>

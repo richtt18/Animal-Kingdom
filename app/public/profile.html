@@ -41,7 +41,7 @@
     <li><a href="survey2.html">Survey</a></li>
     <li class="is-active"><a href="profile.html">Profile</a></li>
     <li><a href="signup.html">Sign up</a></li>
-    <li><a id="signIn">Sign in</a></li>
+    <li><a class="signIn">Sign in</a></li>
   </ul>
 </div>
           </div>
@@ -49,27 +49,46 @@
       </div>
     </nav>
   </div>
-    <div class="hero-body">
+  <div id="userInfo1"></div>
+    <div id="userInfo" class="hero-body">
         
-      <div class="container has-text-centered">
+      <div class="container has-text">
+          <section class="hero is-info">
+              <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                      <div class="column is-four-fifths">
+                          <h1 class="title">
+                            Please Sign up/Sign in
+                          </h1>
+                        </div> 
+                        <div class="column"> 
+                      <p class="has-text-centered">
+                        <a class="button is-normal is-outlined" href="/signup.html">
+                          Sign up 
+                        </a>
+                      </p>
+                    </div>  
+                    <div class="column">
+                      <p class="has-text-centered">
+                        <a class="signIn button is-normal is-outlined"  href="">
+                          Sign in
+                        </a>
+                      </p>
+                   </div>
+                    </div>
+                </div>
+              </div>
+            </section><br>
+          <div class="container" >
+               <div class= "columns" id="addPet">
+                  <img  src="assets/images/images-1.jpg" id="userPet">
+                </div>
+           </div>
         <div class="columns is-vcentered">
           <div class="column is-5">
           </div>
-          <div class="column is-6 is-offset-1">
-       
-            <br>
-            <p class="has-text-centered">
-              <a class="button is-large is-info is-outlined" href="/survey2">
-                 Survey 
-              </a>
-            </p>
-            <br>
-            <p class="has-text-centered">
-              <a class="button is-large is-info is-outlined" href="/pet">
-               Add My Pet
-              </a>
-            </p>
-          </div>
+     
         </div>
       </div>
     </div>
@@ -129,6 +148,7 @@
   <!-- <script async type="text/javascript" src="../js/bulma.js"></script> -->
   <script  type="text/javascript" src="/assets/js/login.js"></script>
   <script  type="text/javascript" src="/assets/js/profile.js"></script>
+  <script  type="text/javascript" src="/assets/js/dog.js"></script>
 
 </body>
 </html>
