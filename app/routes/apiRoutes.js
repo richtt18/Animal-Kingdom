@@ -29,7 +29,7 @@ module.exports = function(app) {
         res.json(dbUser);
       });
   });
-
+  
   app.post("/api/users/login", function(req, res) {
     db.User.findOne({
       where: {
@@ -130,10 +130,8 @@ app.get("/api/pets/:id", function(req, res) {
 });
 
 app.post("/api/pets", function(req, res) {
-  console.log(req.body);
-  db.Pet.create(req.body)
+   db.Pet.create(req.body)
     .then(function(dbPet) {
-      console.log("Here!")
       res.json(dbPet);
     });
 });
@@ -148,7 +146,6 @@ app.post("/api/pets/:animal", function(req, res) {
     include: [{model: db.User, attributes: attributes}]
   })
     .then(function(dbPet) {
-      console.log(dbPet);
       res.json(dbPet);
     })
     .catch(function(err){

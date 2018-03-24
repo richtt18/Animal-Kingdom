@@ -70,7 +70,7 @@ $(document).ready(function(){
             <div class="column is-6">
             <div class="tile is-parent">
             <article class="tile is-child notification is-danger">
-              <h5 class='title'>  What Person you are?       Cat or Dog</h5>
+              <h5 class='title'>  What Person are you?       Cat Person or Dog Person</h5>
               <p class="has-text-centered">
               <a class="button is-normal is-outlined" href="/survey2.html">
                 Survey 
@@ -111,12 +111,10 @@ $(document).ready(function(){
           }
     }    
     
-    if (data.Pets !== undefined || data.Pets.length != 0){
-           $("#addMyPet").append(`<h3 id="myPets"> My pets:</h3><br>`)
-      for (i = 0; i < data.Pets.length; i ++){
+     for (i = 0; i < data.Pets.length; i ++){
           console.log(data.Pets[i].petName);  
-          $("#myPets").append(`
-                     <div class="animal-display col-sm-3">
+          $("#addMyPet").append(`
+                     <div class="animal-display column is-3">
                       <div class=" card-img-top animalCard" style="width: 16rem; heigth: 22rem">
                           <img class="animal-img card-img-top" src="${data.Pets[i].petImage}" alt="Card image cap">
                           <div class="card-body">
@@ -129,7 +127,7 @@ $(document).ready(function(){
           </div>
                 
           `)
-      }
+      
   }
         });
    

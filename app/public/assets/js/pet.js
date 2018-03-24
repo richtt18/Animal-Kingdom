@@ -22,7 +22,7 @@ $("#addPet").on("click", function(){
         UserId: UserId
     }
     console.log(petData);
-    alert(petData);
+    
     var currentURL = window.location.origin;
 
     $.post(currentURL + "/api/pets", petData, function(data){
