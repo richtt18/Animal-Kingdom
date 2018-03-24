@@ -1,4 +1,5 @@
 $("#addPet").on("click", function(){
+    event.preventDefault();
     var petName = $("#petName").val(); 
     var petBreed = $("#breed").val() 
     var petType = $("#pet").val();
@@ -21,6 +22,7 @@ $("#addPet").on("click", function(){
         UserId: UserId
     }
     console.log(petData);
+    alert(petData);
     var currentURL = window.location.origin;
 
     $.post(currentURL + "/api/pets", petData, function(data){
@@ -28,6 +30,6 @@ $("#addPet").on("click", function(){
         console.log(data);
       
   });
-  window.location.href = "/profile";
+  window.location.href = "profile.html";
 })
 

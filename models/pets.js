@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
       },
      petBreed: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         len: [1]
       },
       petType: {
@@ -20,17 +20,17 @@ module.exports = function(sequelize, DataTypes) {
       },
       petAge: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         len: [1]
       },
       petImage: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         len: [1]
       },
       petDescription: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.STRING(5000),
+        allowNull: true,
         len: [1]
       },
       petLocation: {

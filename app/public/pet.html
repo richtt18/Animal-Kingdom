@@ -8,9 +8,10 @@
 		<meta name="author" content="Julie Hoffman">
 
 		<!-- Link to current min version of bootstrap and jquery library -->
-		<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-      <link rel="stylesheet" href="assets/css/custom.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+			<link rel="stylesheet" href="assets/css/custom.css">
+
 		
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
@@ -30,15 +31,12 @@
 							<div id="navbarMenu" class="navbar-menu">
 					 <div class="navbar-end"><div class="tabs is-right">
 					  <ul>
-						<li><a href="home.html">Home</a></li>
-					
-						<li><a href="">Dog</a></li>
-						<li><a href="">Cat</a></li>
-						<li  class="is-active"><a href="pet.html">Add Pet</a></li>
-						<li><a href="survey2.html">Survey</a></li>
-						<li><a href="signup.html">Sign up</a></li>
-						<li><a class="signIn">Sign in</a></li>
-					
+								<li><a href="home.html">Home</a></li>
+								<li><a href="dog.html">Dog</a></li>
+								<li><a href="cat.html">Cat</a></li>
+								<li><a href="profile.html">Profile</a></li>
+								<li class="is-active"><a href="signup.html">Sign up</a></li>
+								<li><a a class="signIn">Sign in</a></li>
 					  </ul>
 					</div>
 							  </div>
@@ -51,106 +49,103 @@
 
 
 				<!-- Begin user input -->
-                <h3><strong>ABOUT YOUR PET</strong></h3>
-                
-				<div class="field">
-					<label class="label">Pet Name</label>
-					<div class="control">
-						<input class="input form-control" type="text" placeholder="Pet Name" id="petName">
-					</div>
-				</div>
-
-				<div class="field">
-					<label class="label">Pet</label>
-					<div class="select">
-                            <select  id="pet">
-                              <option>dog</option>
-                              <option>cat</option>
-                            </select>
-                 </div>
-				</div>
-        
-        <div class="field">
-            <label class="label">Breed</label>
-            <div class="control">
-              <input class="input form-text" type="text" placeholder="Breed" id="breed">
-            </div>
-          </div>
-
-        <div class="field">
-            <label class="label">Age</label>
-            <div class="select">
-                    <select  id="age">
-                      <option>baby</option>
-                      <option>young</option>
-                      <option>adult</option>
-                      <option>senior</option>
-                    </select>
-                  </div>
-					</div><br>
-					<div class="field">
-							<label class="label">Image URL</label>
-							<div class="control">
-								<input class="input form-text" type="text" placeholder="Image URL" id="image">
-							</div>
-						</div><br>
-          <div class="field">
-                <label class="label">Description</label>
-                <div class="control">
-                        <textarea class="textarea" placeholder="Description" rows="10" id="description"></textarea>
-                </div>
-              </div><br>
-         
-				<div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link" id="addPet">Add Pet</button>
-            </div>
-			</div>
-			<div class="container modal-container" id="app">
-					<div class="modal">
-						<div class="modal-background"></div>
-						<div class="modal-content">
-							 <div class="hero-body">
-										<div class="container has-text-centered">
-											 <h6 class="title is-5 has-text-grey">Sign in</h6>
-												 <div class="box">
-													<figure class="avatar">
-														<img  src="assets/images/images-1.jpg" id="imgAvatar">
-													</figure>
-													<form>
-														<div class="field">
-															<div class="control">
-																<input class="input is-medium" type="email" placeholder="Your Email" autofocus="" id="loginEmail">
-															</div>
-														</div>
-							
-														<div class="field">
-															<div class="control">
-																<input class="input is-medium" type="password" placeholder="Your Password" id="loginPassword">
-															</div>
-														</div>
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox">
-																Remember me
-															</label>
-														</div>
-														<button class="button is-block is-info is-medium is-fullwidth" id="loginButton">Login</button><br>
-														<button class="button is-block is-info is-medium is-fullwidth" id="cancelButton">Cancel</button>
-													</form>
-												</div>
-											 
-										</div>
+				<h3><strong>ADD MY PET</strong></h3>
+				<form>
+						<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="inputName">Pet Name</label>
+									<input type="text" class="form-control" id="petName" placeholder="Pet Name">
+								</div>
+								<div class="form-group col-md-6">
+										<label for="inputEmail4">Breed</label>
+										<input type="text" class="form-control" id="breed" placeholder="Breed">
 									</div>
+							</div>
+						<div class="form-row">
+								<div class="form-group col-md-3">
+					
+													<label >Pet Type</label>
+													<select class="custom-select" id="pet">
+													<option value="dog">dog</option>
+													<option value="cat">cat</option>
+												</select>
+											</div>
+								<div class="form-group col-md-3">
+										<label for="inputName">Pet Age</label>
+												<select class="custom-select" id="age">
+												<option value="Baby">Baby</option>
+												<option value="Young">Young</option>
+												<option value="Adult">Adult</option>
+												<option value="Senior">Senior</option>
+											</select>
+										
+							</div>
+							<div class="form-group col-md-6">
+									<label for="inputEmail4">Pet Image URL</label>
+									<input type="text" class="form-control" id="image" placeholder="Pet Image URL">
+							</div>
 						</div>
-						<button class="modal-close"></button>
-					</div>       
+						<div class="form-group">
+							<label for="inputAddress">Description</label>
+							<textarea class="textarea" placeholder="Description" id="description" rows="10"></textarea>
+						</div>
+					
+						<button type="submit" class="btn btn-primary" id="addPet" >Add Pet</button>
+					</form>
 				</div>
+
+				<div class="hero-foot">
+						<div class="container">
+							<div class="tabs is-centered">
+								<ul>
+									<li><a>Copyright 2018 Animal Kingdom App</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="container modal-container" id="app">
+							<div class="modal">
+								<div class="modal-background"></div>
+								<div class="modal-content">
+									 <div class="hero-body" style="height: 100px">
+												<div class="container has-text-centered">
+													 <h6 class="title is-5 has-text-grey">Sign in</h6>
+														 <div class="box">
+															<figure class="avatar">
+																<img  src="assets/images/images-1.jpg" id="imgAvatar">
+															</figure>
+															<form>
+																<div class="field">
+																	<div class="control">
+																		<input class="input is-medium" type="email" placeholder="Your Email" autofocus="">
+																	</div>
+																</div>
+									
+																<div class="field">
+																	<div class="control">
+																		<input class="input is-medium" type="password" placeholder="Your Password">
+																	</div>
+																</div>
+																<div class="field">
+																	<label class="checkbox">
+																		<input type="checkbox">
+																		Remember me
+																	</label>
+																</div>
+																<button class="button is-block is-info is-medium is-fullwidth" id="loginButton">Login</button><br>
+																<button class="button is-block is-info is-medium is-fullwidth" id="cancelButton">Cancel</button>
+															</form>
+														</div>
+													 
+												</div>
+											</div>
+								</div>
+								<button class="modal-close"></button>
+							</div>       
+						</div>
+				</section>
 		</section>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		
-	<script  type="text/javascript" src="/assets/js/survey.js"></script>
-    <script  type="text/javascript" src="/assets/js/login.js"></script>
-    <script  type="text/javascript" src="/assets/js/pet.js"></script>
+	<script  type="text/javascript" src="/assets/js/pet.js"></script>
 	</body>
 </html>

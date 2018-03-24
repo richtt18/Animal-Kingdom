@@ -106,7 +106,8 @@ app.get("/api/pets", function(req, res) {
   
   db.Pet.findAll({
     where: { 
-      UserId: req.query.userId
+      petType: req.body.petType,
+      petLocation: req.body.petLocation
     },
     
   }).then(function(dbPet) {
@@ -147,6 +148,7 @@ app.post("/api/pets/:animal", function(req, res) {
     include: [{model: db.User, attributes: attributes}]
   })
     .then(function(dbPet) {
+      console.log(dbPet);
       res.json(dbPet);
     })
     .catch(function(err){
